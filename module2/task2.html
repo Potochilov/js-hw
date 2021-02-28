@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<script>
+    // Напиши скрипт подсчета стоимости гравировки украшений.
+    // Для этого создай функцию calculateEngravingPrice(message, pricePerWord) принимающую строку (в строке будут только слова и пробелы)
+    // и цену гравировки одного слова, и возвращающую цену гравировки всех слов в строке.
+    function calculateEngravingPrice(message, pricePerWord) {
+	    const message_arr = message.split(' ');
+	    return message_arr.length * pricePerWord;
+    }
+
+    console.log(calculateEngravingPrice('one two three', 130))
+</script>
+</body>
+</html>

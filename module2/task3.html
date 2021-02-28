@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<script>
+    // Напиши фукцнию findLongestWord(string), которая принимает параметром произвольную строку (в строке будут только слова и пробелы)
+    // и возвращает самое длинное слово в этой строке.
+    function findLongestWord(string) {
+	    let longestString = '';
+	    const words_arr = string.split(' ');
+	    for (let word of words_arr) {
+		    longestString = word.length > longestString.length ? word : longestString;
+      }
+
+	    return longestString;
+    }
+
+    console.log(findLongestWord('one two three')); // three
+</script>
+</body>
+</html>

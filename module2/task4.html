@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<script>
+    // Напиши функцию formatString(string) которая принимает строку и форматирует ее если необходимо.
+    // Если длина строки не превышает 40 символов, функция возвращает ее в исходном виде.
+    // Если длина больше 40 символов, то функция обрезает строку до 40-ка символов и добавляет в конец строки троеточие '...', после чего возвращает укороченную версию.
+    function formatString(string) {
+    	const cropped_string = string.slice(0, 40);
+    	return cropped_string + (string.length > 40 ? '...' : '');
+    }
+
+    console.log(formatString('one two three one two'));
+</script>
+</body>
+</html>

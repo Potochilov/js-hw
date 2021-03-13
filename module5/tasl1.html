@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  // Напиши функцию-конструктор Account, которая создает объект со свойствами login и email.
+  // В prototype функции-конструктора добавь метод getInfo(), который выводит в консоль значения полей login и email объекта который его вызвал.
+  const Account = function ({email, login} = {}) {
+    this.login = login;
+    this.email = email;
+  };
+
+  // add method to Account prototype
+  Account.prototype.getInfo = function () {
+    console.log(`Login: ${this.login}, Email: ${this.email}`);
+  };
+
+  const user = new Account({
+	  login: 'Poly',
+	  email: 'poly@mail.com',
+  });
+
+  user.getInfo();
+</script>
+</body>
+</html>
